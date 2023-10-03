@@ -24,11 +24,7 @@ public class AddProductServlet extends HttpServlet {
 
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-
-
-
-
-
+        // Serv product-form page
         RequestDispatcher dispatcher = req.getRequestDispatcher("product-form.jsp");
         dispatcher.forward(req, res);
 
@@ -36,6 +32,7 @@ public class AddProductServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
 
+        // Get user inputs
         String name = req.getParameter("name");
         String description = req.getParameter("description");
         double price = Integer.parseInt(req.getParameter("price"));
@@ -44,11 +41,11 @@ public class AddProductServlet extends HttpServlet {
         Part part = req.getPart("image");
         InputStream inputStream = part.getInputStream();
 
+        // Create product
         IProductService pServ = new ProductService();
-        pServ.
+        pServ.addProduct(name,description,price,quantity,inputStream);
 
-
-
+        //Redirect to products page
         res.sendRedirect("products");
 
     }
