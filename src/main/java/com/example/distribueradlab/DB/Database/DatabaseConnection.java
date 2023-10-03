@@ -16,6 +16,7 @@ public class DatabaseConnection  {
     /**
      * Thread safe method
      * @return singleton instance
+     * OHA only one homie att a time protocol
      */
     public static synchronized DatabaseConnection getInstance() {
         if (instance == null) {

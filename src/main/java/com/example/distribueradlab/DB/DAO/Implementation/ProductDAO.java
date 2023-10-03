@@ -74,8 +74,8 @@ public class ProductDAO implements IProductDAO {
             // Release connection
             DatabaseConnection.getInstance().releaseConnection(conn);
 
-        } catch (SQLException | IOException | DatabaseException e) {
-            throw new DatabaseException();
+        } catch (SQLException | IOException e) {
+            throw new DatabaseException(e.getMessage(), e);
         }
 
 
@@ -115,7 +115,7 @@ public class ProductDAO implements IProductDAO {
             // Release connection
             DatabaseConnection.getInstance().releaseConnection(conn);
         } catch (SQLException e) {
-            throw new DatabaseException();
+            throw new DatabaseException(e.getMessage(),e);
         }
 
         return success;

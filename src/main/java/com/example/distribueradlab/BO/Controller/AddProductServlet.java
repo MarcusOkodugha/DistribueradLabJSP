@@ -52,8 +52,7 @@ public class AddProductServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("products.jsp");
-        dispatcher.forward(req, res);
+        res.sendRedirect("products");
 
     }
 
