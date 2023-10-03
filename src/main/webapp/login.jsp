@@ -11,16 +11,13 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-<div class="topnav">
-    <a class="active" href="index.jsp">Home</a>
-    <a href="login.jsp">Go to Login Page</a>
-    <a href="hello-servlet">Hello Servlet</a>
-</div>
-<h1><%= "Logga in för snabbare betalning." %></h1>
+<body class="page">
+    <jsp:include page="navbar.jsp"></jsp:include>
+<div class="login"><br/>
+<h1>Logga in för snabbare betalning. </h1>
     <h2>Logga in på Apple Store</h2>
-    <div>
-        Epost @<input>
-    </div>
+    <div>Epost @<input></div>
+
+</div>
 </body>
 </html>

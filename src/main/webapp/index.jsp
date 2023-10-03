@@ -6,11 +6,7 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body class="page">
-        <div class="topnav">
-            <a class="active" href="index.jsp">Home</a>
-            <a href="login.jsp">Go to Login Page</a>
-            <a href="hello-servlet">Hello Servlet</a>
-        </div>
+    <jsp:include page="navbar.jsp"></jsp:include>
         <div class="welcome-text">
             <h2>
                 Store.<span style="color: #6e6e73"> Det bästa stället att <br/>
