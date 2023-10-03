@@ -1,4 +1,4 @@
-package com.example.distribueradlab.BO.Controller;
+package com.example.distribueradlab.BO.Controllers;
 
 
 import com.example.distribueradlab.BO.Entities.Product;
@@ -13,7 +13,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/products")

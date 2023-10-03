@@ -1,6 +1,5 @@
-package com.example.distribueradlab.BO.Controller;
+package com.example.distribueradlab.BO.Controllers;
 
-import com.example.distribueradlab.BO.Entities.Product;
 import com.example.distribueradlab.DB.DAO.IProductDAO;
 import com.example.distribueradlab.DB.DAO.Implementation.ProductDAO;
 import com.example.distribueradlab.DB.Database.DatabaseException;
@@ -15,7 +14,6 @@ import jakarta.servlet.http.Part;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 
 @WebServlet("/add-product")

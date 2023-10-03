@@ -9,7 +9,6 @@ public class Product {
     private  int quantity;
     private  double price;
     private  Integer id;
-    private  byte[] image;
     private String base64Image;
 
     public Product(){
@@ -22,7 +21,6 @@ public class Product {
         this.quantity = quantity;
         this.price = price;
         this.id = id;
-        this.image = image;
         this.base64Image = base64Image;
     }
 
@@ -67,13 +65,7 @@ public class Product {
         this.id = id;
     }
 
-    public byte[] getImage() {
-        return image;
-    }
 
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
 
     public String getBase64Image() {
         return base64Image;
@@ -91,7 +83,6 @@ public class Product {
                 ", quantity=" + quantity +
                 ", price=" + price +
                 ", id=" + id +
-                ", image=" + Arrays.toString(image) +
                 ", base64Image='" + base64Image + '\'' +
                 '}';
     }
