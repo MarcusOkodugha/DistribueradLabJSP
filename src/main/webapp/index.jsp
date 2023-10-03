@@ -9,7 +9,7 @@
 <h1><%= "Hello World!5" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="hello-servlet">Hello Servlet updated</a>
 <br/>
 <a href="/add-product">Add product</a>
 <br/>
