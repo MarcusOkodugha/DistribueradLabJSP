@@ -1,5 +1,7 @@
 package com.example.distribueradlab.BO.Controllers;
 
+import com.example.distribueradlab.BO.Services.IProductService;
+import com.example.distribueradlab.BO.Services.Imlementations.ProductService;
 import com.example.distribueradlab.DB.DAO.IProductDAO;
 import com.example.distribueradlab.DB.DAO.Implementation.ProductDAO;
 import com.example.distribueradlab.DB.Database.DatabaseException;
@@ -34,8 +36,6 @@ public class AddProductServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
 
-        IProductDAO productDAO = new ProductDAO();
-
         String name = req.getParameter("name");
         String description = req.getParameter("description");
         double price = Integer.parseInt(req.getParameter("price"));
@@ -44,11 +44,10 @@ public class AddProductServlet extends HttpServlet {
         Part part = req.getPart("image");
         InputStream inputStream = part.getInputStream();
 
-        try {
-            productDAO.addProduct(name, description, price,quantity, inputStream);
-        } catch (DatabaseException e) {
-            throw new RuntimeException(e);
-        }
+        IProductService pServ = new ProductService();
+        pServ.
+
+
 
         res.sendRedirect("products");
 
